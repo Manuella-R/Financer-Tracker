@@ -77,11 +77,6 @@ To run this app, you need to have the following installed:
 - **item_expense.xml**: The layout for displaying each expense in the RecyclerView.
 - **activity_main.xml**: The main layout for the app.
 
-## Screenshots
-
-Include screenshots here if applicable, showing the app's UI.
-
----
 
 ## Contributing
 
