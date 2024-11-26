@@ -91,10 +91,8 @@ We welcome contributions! If you'd like to contribute to the development of the 
 
 Please follow the existing coding conventions and ensure your code is well-documented.
 
----
 
 ## License
 
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License.
 
----
