@@ -2,6 +2,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.Query
+import com.example.financetracker.Expense
 
 @Database(entities = [Expense::class], version = 1)
 abstract class ExpenseDatabase : RoomDatabase() {
@@ -17,7 +19,7 @@ abstract class ExpenseDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ExpenseDatabase::class.java,
-                    "expense_database"
+                    "expense_database" // This is correct and does not need to be a constant
                 ).build()
                 INSTANCE = instance
                 instance
