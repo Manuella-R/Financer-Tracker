@@ -9,7 +9,7 @@ import com.example.financetracker.Expense
 class ExpenseAdapter(private val onDeleteClick: (Expense) -> Unit) :
     RecyclerView.Adapter<ExpenseAdapter.ExpenseViewHolder>() {
 
-    private var expenses = emptyList<Expense>()
+    private var expenses = emptyList<Expense>()  // Holds the list of expenses
 
     // ViewHolder class that holds references to the views in the layout
     class ExpenseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,13 +28,15 @@ class ExpenseAdapter(private val onDeleteClick: (Expense) -> Unit) :
     // Binds data to the views in the ViewHolder
     override fun onBindViewHolder(holder: ExpenseViewHolder, position: Int) {
         val expense = expenses[position]
-        holder.amountTextView.text = "Amount: $${expense.amount}"
+
+        // Bind the expense data to the views
         holder.titleTextView.text = "Title: ${expense.title}"
+        holder.amountTextView.text = "Amount: $${expense.amount}"
         holder.dateTextView.text = "Date: ${expense.date}"
 
         // Handle long click to delete the expense
         holder.itemView.setOnLongClickListener {
-            onDeleteClick(expense)
+            onDeleteClick(expense)  // Call delete method when item is long-clicked
             true
         }
     }
