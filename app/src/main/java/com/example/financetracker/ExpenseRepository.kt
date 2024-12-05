@@ -1,4 +1,6 @@
 import androidx.lifecycle.LiveData
+import androidx.room.Query
+import com.example.financetracker.Expense
 
 class ExpenseRepository(private val expenseDao: ExpenseDao) {
 
